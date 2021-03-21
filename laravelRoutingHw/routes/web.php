@@ -18,23 +18,23 @@ Route::get('/', function () {
 });
 
 Route::get('addition/{augend}/{addend}', function () {
-    return view('welcome');
+    return view('When you add {augend} and {addend}, you receive ');
 });
-Route::get('subtraction', function () {
-    return view('welcome');
+Route::get('subtraction/{minuend}/{subtrahend}', function () {
+    return view('When you subtract {subtrahend} from {minuend}, you receive ');
 });
-Route::get('multiplication', function () {
-    return view('welcome');
+Route::get('multiplication/{multiplier}/{multiplicand}', function () {
+    return view('When you multiply {multiplier} by {multiplicand}, you receive ');
 });
-Route::get('division', function () {
-    return view('welcome');
+Route::get('division/{dividend}/{divisor}', function () {
+    return view('When you divide {dividend} by {divisor}, you receive ');
 });
-Route::get('modulo', function () {
-    return view('welcome');
+Route::get('modulo/{dividend}/{divisor}', function () {
+    return view('When you divide {dividend} by {divisor}, the remainder you receive is ');
 });
-Route::get('exponentation', function () {
-    return view('welcome');
+Route::get('exponentation/{base}/{exponent}', function () {
+    return view('When you raise {base} to the power of {exponent}, you receive ');
 });
-Route::get('nthRoot', function () {
-    return view('welcome');
+Route::get('nthRoot/{radicand}/{degree}', function () {
+    return view('When you pull a {degree}th degree root out of {radicand}, you receive ');
 });
