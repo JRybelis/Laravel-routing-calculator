@@ -14,20 +14,16 @@ use App\Http\Controllers\MathController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('calculate/{addition}/{augend}/{addend}', [MathController::class,'addition']);
 
-Route::get('addition/{augend}/{addend}', [MathController::class,'addition']);
+Route::get('calculate/{subtraction}/{minuend}/{subtrahend}', [MathController::class,'subtraction']);
 
-Route::get('subtraction/{minuend}/{subtrahend}', [MathController::class,'subtraction']);
+Route::get('calculate/{multiplication}/{multiplier}/{multiplicand}', [MathController::class,'multiplication']);
 
-Route::get('multiplication/{multiplier}/{multiplicand}', [MathController::class,'multiplication']);
+Route::get('calculate/{division}/{dividend}/{divisor}', [MathController::class,'division']);
 
-Route::get('division/{dividend}/{divisor}', [MathController::class,'division']);
+Route::get('calculate/{modulo}/{dividend}/{divisor}', [MathController::class,'modulo']);
 
-Route::get('modulo/{dividend}/{divisor}', [MathController::class,'modulo']);
+Route::get('calculate/{exponentation}/{base}/{exponent}', [MathController::class,'exponentation']);
 
-Route::get('exponentation/{base}/{exponent}', [MathController::class,'exponentation']);
-
-Route::get('nthRoot/{radicand}/{degree}', [MathController::class,'nthRoot']);
+Route::get('calculate/{nthRoot}/{radicand}/{degree}', [MathController::class,'nthRoot']);
