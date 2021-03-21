@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MathController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,24 +18,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('addition/{augend}/{addend}', function () {
-    return view('When you add {augend} and {addend}, you receive ');
-});
-Route::get('subtraction/{minuend}/{subtrahend}', function () {
-    return view('When you subtract {subtrahend} from {minuend}, you receive ');
-});
-Route::get('multiplication/{multiplier}/{multiplicand}', function () {
-    return view('When you multiply {multiplier} by {multiplicand}, you receive ');
-});
-Route::get('division/{dividend}/{divisor}', function () {
-    return view('When you divide {dividend} by {divisor}, you receive ');
-});
-Route::get('modulo/{dividend}/{divisor}', function () {
-    return view('When you divide {dividend} by {divisor}, the remainder you receive is ');
-});
-Route::get('exponentation/{base}/{exponent}', function () {
-    return view('When you raise {base} to the power of {exponent}, you receive ');
-});
-Route::get('nthRoot/{radicand}/{degree}', function () {
-    return view('When you pull a {degree}th degree root out of {radicand}, you receive ');
-});
+Route::get('addition/{augend}/{addend}', [MathController::class,'addition']);
+
+Route::get('subtraction/{minuend}/{subtrahend}', [MathController::class,'subtraction']);
+
+Route::get('multiplication/{multiplier}/{multiplicand}', [MathController::class,'multiplication']);
+
+Route::get('division/{dividend}/{divisor}', [MathController::class,'division']);
+
+Route::get('modulo/{dividend}/{divisor}', [MathController::class,'modulo']);
+
+Route::get('exponentation/{base}/{exponent}', [MathController::class,'exponentation']);
+
+Route::get('nthRoot/{radicand}/{degree}', [MathController::class,'nthRoot']);
