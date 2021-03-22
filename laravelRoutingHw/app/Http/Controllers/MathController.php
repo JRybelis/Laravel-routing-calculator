@@ -7,37 +7,24 @@ use Illuminate\Http\Request;
 class MathController extends Controller 
 { //gate methods
     public function addition($addition, $augend, $addend) {
-        return view('math.operations',['urlVariable1' => $addition, 'urlVariable2' => $augend, 'urlVariable3' => $addend]);
-            //'When you add'.$augend.' and '.$addend.', you receive '.$augend + $addend.'.'
+        return view('math.operations',['addition' => $addition, 'term1' => $augend, 'term2' => $addend]);
     }
     public function subtraction ($subtraction, $minuend, $subtrahend) {
-        return view('math.operations',['urlVariable1' => $subtraction, 'urlVariable2' => $minuend, 'urlVariable3' => $subtrahend]);
-            //'When you subtract'.$minuend.' from '.$subtrahend.', you receive '.$minuend - $subtrahend.'.');
-        
+        return view('math.operations',['subtraction' => $subtraction, 'term1' => $minuend, 'term2' => $subtrahend]);
     }
     public function multiplication ($multiplication, $multiplier, $multiplicand) {
-        return view('math.operations',['urlVariable1' => $multiplication, 'urlVariable2' => $multiplier, 'urlVariable3' => $multiplicand]);
-            //'When you multiply'.$multiplier.' by '.$multiplicand.', you receive '.$multiplier * $multiplicand.'.');
-        
+        return view('math.operations',['multiplication' => $multiplication, 'term1' => $multiplier, 'term2' => $multiplicand]);
     }
     public function division ($division, $dividend, $divisor) {
-        return view('math.operations',['urlVariable1' => $division, 'urlVariable2' => $dividend, 'urlVariable3' => $divisor]);
-            //'When you divide'.$dividend.' by '.$divisor.', you receive '.$dividend / $divisor.'.');
-        
+        return view('math.operations',['division' => $division, 'term1' => $dividend, 'term2' => $divisor]);
     }
     public function modulo ($modulo, $dividend, $divisor) {
-        return view('math.operations',['urlVariable1' => $modulo, 'urlVariable2' => $dividend, 'urlVariable3' => $divisor]);
-            //'When you divide'.$dividend.' by '.$divisor.', the remainder you receive is '.$dividend % $divisor.'.');
-        
+        return view('math.operations',['modulo' => $modulo, 'term1' => $dividend, 'term2' => $divisor]);
     }
     public function exponentation ($exponentation, $base, $exponent) {
-        return view('math.operations',['urlVariable1' => $exponentation, 'urlVariable2' => $base, 'urlVariable3' => $exponent]);
-            //'When you raise'.$base.' to the power of '.$exponent.', you receive '.pow($base, $exponent).'.');
-        
+        return view('math.operations',['exponentation' => $exponentation, 'term1' => $base, 'term2' => $exponent]);
     }
     public function nthRoot ($nthRoot, $radicand, $degree) {
-        return view('math.operations',['urlVariable1' => $nthRoot, 'urlVariable2' => $radicand, 'urlVariable3' => $degree]);
-            //'When you pull the '.$degree.'th root of '.$radicand.', you receive '.gmp_root($radicand, $degree).'.');
-        
+        return view('math.operations',['nthRoot' => $nthRoot, 'term1' => $radicand, 'term2' => $degree]);
     }
 }
