@@ -6,7 +6,7 @@
     <br></br>
 
     @if($addition) 
-        <h2>When you add {{$term1}} and {{$term2}}, you receive {{$term1 + $term2}}.</h2>
+        <h2>When you add {{$term1}} to {{$term2}}, you receive {{$term1 + $term2}}.</h2>
     @elseif($subtraction)
         <h2>When you subtract {{$term1}}from {{$term2}}, you receive {{$term1 - $term2}}.</h2>
     @elseif($multiplication)

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MathController;
+use App\Http\Controllers\PostCalculatorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,8 @@ Route::get('calculate/{modulo}/{dividend}/{divisor}', [MathController::class,'mo
 Route::get('calculate/{exponentation}/{base}/{exponent}', [MathController::class,'exponentation']);
 
 Route::get('calculate/{nthRoot}/{radicand}/{degree}', [MathController::class,'nthRoot']);
+
+
+Route::get('calculate', [PostCalculatorController::class,'show'])->name('showCalculator');
+
+Route::post('calculate', [PostCalculatorController::class,'calculate'])->name('doMath');
