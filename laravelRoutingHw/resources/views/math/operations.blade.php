@@ -5,20 +5,20 @@
     <br></br>
     <br></br>
 
-    @if($addition) 
-        <h2>When you add {{$term1}} to {{$term2}}, you receive {{$term1 + $term2}}.</h2>
-    @elseif($subtraction)
-        <h2>When you subtract {{$term1}}from {{$term2}}, you receive {{$term1 - $term2}}.</h2>
-    @elseif($multiplication)
-        <h2>When you multiply {{$term1}} by {{$term2}}, you receive {{$term1 * $term2}}.</h2>
-    @elseif($division)
-        <h2>When you divide {{$term1}} by {{$term2}}, you receive {{$term1 / $term2}}.</h2>
-    @elseif($modulo)
-        <h2>When you divide {{$term1}} by {{$term2}}, the remainder you receive is {{$term1 % $term2}}.</h2>
-    @elseif($exponentation)
-        <h2>When you raise {{$term1}} to the power of {{$term2}}, you receive {{pow($term1, $term2)}}.</h2>
-    @elseif($nthRoot)
-        <h2>When you pull the {{$term2}}th root of {{$term1}}, you receive {{gmp_root($term1, $term2)}}.</h2>
+    @if($operation == 'addition') 
+        <h2>When you add {{$term1}} to {{$term2}}, you receive {{$result}}.</h2>
+    @elseif($operation == 'subtraction')
+        <h2>When you subtract {{$term1}}from {{$term2}}, you receive {{$result}}.</h2>
+    @elseif($operation == 'multiplication')
+        <h2>When you multiply {{$term1}} by {{$term2}}, you receive {{$result}}.</h2>
+    @elseif($operation == 'division')
+        <h2>When you divide {{$term1}} by {{$term2}}, you receive {{$result}}.</h2>
+    @elseif($operation == 'modulo')
+        <h2>When you divide {{$term1}} by {{$term2}}, the remainder you receive is {{$result}}.</h2>
+    @elseif($operation == 'exponentation')
+        <h2>When you raise {{$term1}} to the power of {{$term2}}, you receive {{$result}}.</h2>
+    @elseif($operation == 'nthRoot')
+        <h2>When you pull the {{$term2}}th root of {{$term1}}, you receive {{$result}}.</h2>
     @endif
 
 @endsection

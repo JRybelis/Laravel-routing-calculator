@@ -15,20 +15,7 @@ use App\Http\Controllers\PostCalculatorController;
 |
 */
 
-Route::get('calculate/{addition}/{augend}/{addend}', [MathController::class,'addition']);
-
-Route::get('calculate/{subtraction}/{minuend}/{subtrahend}', [MathController::class,'subtraction']);
-
-Route::get('calculate/{multiplication}/{multiplier}/{multiplicand}', [MathController::class,'multiplication']);
-
-Route::get('calculate/{division}/{dividend}/{divisor}', [MathController::class,'division']);
-
-Route::get('calculate/{modulo}/{dividend}/{divisor}', [MathController::class,'modulo']);
-
-Route::get('calculate/{exponentation}/{base}/{exponent}', [MathController::class,'exponentation']);
-
-Route::get('calculate/{nthRoot}/{radicand}/{degree}', [MathController::class,'nthRoot']);
-
+Route::get('calculate/{operation}/{term1}/{term2}', [MathController::class,'mathOperation']);
 
 Route::get('calculate', [PostCalculatorController::class,'show'])->name('showCalculator');
 
